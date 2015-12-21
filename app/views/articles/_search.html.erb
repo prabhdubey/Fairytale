@@ -1,0 +1,13 @@
+<%= form_for(articles_path, remote: :true, method: :get, html: { id: "searchform", class: 'form-signup' }) do |f| %> 
+  <div class="field">
+    <%= text_field_tag :title, nil, id: "search", placeholder: "Search Articles", class: "form-control"  %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#search").keyup(function() {
+      $("#searchform").submit();
+    });
+  });
+</script>

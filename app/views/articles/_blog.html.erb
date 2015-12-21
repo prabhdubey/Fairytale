@@ -1,0 +1,7 @@
+<% @articles.each do |article| %>
+  <h2><%= link_to "#{article.title}", article %></h2>
+  <%== article.Content %>
+  <p class="date"><%= article.user.first_name %> <%= image_tag("more.gif") %>  <%= link_to "Read more", article %> <%= image_tag("comment.gif")%><%= link_to "comment",article_comments_path(article) %> <%= image_tag("timeicon.gif") %> </p>
+  
+<% end %>
+
